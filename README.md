@@ -14,26 +14,39 @@ TODO
    ###### Variables
     name
    ###### Relations
-    `modules`
+    modules
   
   #### Module
    ###### Variables
-    `name`
+    name
    ###### Relations
-    `plans`, `models`
+    plans, models
    
   #### Model
    ###### Variables
-    `model`, `module`, `canCreate`, `canUpdate`, `canDelete`, `maxCount`
+    model, module, canCreate, canUpdate, canDelete, maxCount
    ###### Relations
-    `module`
+    module
 
   
 ### Examples
 
 ``` php
+
+ ##Basic usage##
  //You can use the saasify-helper to create components
- 
+  $plan = saasify()->plan();
+  $model = saasify()->module();
+  $model = saasify()->plan();
+  
+  //Change the variables using the helper functions
+  $model = saasify()->model()->setModel(\App\Model::class)->setMaxCount(100);
+  
+  //Use the save-fuction to save or update a component
+  $plan = saasify()->plan()->setName('foo')->save();
+  
+  ##Relations##
+  
 
 ```
 
