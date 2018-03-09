@@ -74,10 +74,10 @@ TODO
    //or remove using the remove-functions
    $plan->removeModule($module)
   
-  //As of now, you need to set the module on a model before its saved.
-  $model = saasify()->model()
-                    ->setModel(\App\Model::class)
-                    ->setModule($module);
+   //As of now, you need to set the module on a model before its saved.
+   $model = saasify()->model()
+                     ->setModel(\App\Model::class)
+                     ->setModule($module);
 
 ```
 
