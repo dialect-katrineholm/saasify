@@ -1,0 +1,13 @@
+sudo: required
+
+language: php
+
+php:
+  - 7.1
+env:
+  matrix:
+    - COMPOSER_FLAGS="--prefer-lowest"
+    - COMPOSER_FLAGS=""
+
+script:
+  - phpunit
