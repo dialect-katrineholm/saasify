@@ -96,10 +96,11 @@ TODO
   
   //for saasify to know how many instances of a model a user has,
   //add the saasify helper method to the model with the required logic for counting.
-  
-  public static function saasifyCurrent($user){
-    //logic here, example:
-    return $user->foobar()->count();
+  class User extends Model{
+	  public static function saasifyCurrent($user){
+	    //logic here, example:
+	    return $user->foobar()->count();
+	  }
   }
   
   
