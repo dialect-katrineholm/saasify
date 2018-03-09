@@ -12,7 +12,7 @@ TODO
 ### Components
  #### Plan
    ###### Variables
-    name
+    name, price
    ###### Relations
     modules
   
@@ -33,8 +33,9 @@ TODO
 
 ``` php
 
- ##Basic usage##
- //You can use the saasify-helper to create components
+ ## Save / Update ##
+ 
+  //You can use the saasify-helper to create components
   $plan = saasify()->plan();
   $model = saasify()->module();
   $model = saasify()->plan();
@@ -45,7 +46,20 @@ TODO
   //Use the save-fuction to save or update a component
   $plan = saasify()->plan()->setName('foo')->save();
   
-  ##Relations##
+  ## Retrieve component ##
+  $module = saasify()->modules()->find('foobar');
+  $modules = saasify()->modules()->all();
+  //you can also use queries
+  $plans = saasify()->plans(function($query){
+     return $query->where('price', '>', 10);
+  })->get();
+  
+  ## Relations ##
+  
+  //to add a relaiton use the add-functions
+  $plan = saasify()->plan()->setName('foo')->save();
+  $module = saasify()->module()->setName('bar')->save();
+  $plan->addModule($module);
   
 
 ```
