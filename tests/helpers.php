@@ -1,13 +1,14 @@
 <?php
-
-class User extends \Illuminate\Database\Eloquent\Model{
-	use \Dialect\Saasify\Traits\HasPlans;
+use Dialect\Saasify\Traits\HasPlans;
+use Illuminate\Database\Eloquent\Model;
+class User extends Model{
+	use HasPlans;
 	protected $guarded = [];
 	protected $table = "saasify_users";
 
 }
 
-class Item extends \Illuminate\Database\Eloquent\Model{
+class Item extends Model{
 
 	protected $guarded = [];
 	protected $table = "saasify_items";
@@ -18,7 +19,7 @@ class Item extends \Illuminate\Database\Eloquent\Model{
 
 }
 
-class Product extends \Illuminate\Database\Eloquent\Model{
+class Product extends Model{
 
 	protected $guarded = [];
 	protected $table = "saasify_products";
