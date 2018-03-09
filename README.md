@@ -10,23 +10,23 @@ TODO
 ## Usage
 
 ### Components
-  ####Plan
-  ######Variables
-   `name`
-  ######Relations
-   `modules`
+  #### Plan
+   ###### Variables
+    `name`
+   ###### Relations
+    `modules`
   
-  ####Module
-  ######Variables
-   `name`
-  ######Relations
-   `plans`, `models`
+  #### Module
+   ###### Variables
+    `name`
+   ###### Relations
+    `plans`, `models`
    
-  ####Model
-  ######Variables
-   `model`, `module`, `canCreate`, `canUpdate`, `canDelete`, `maxCount`
-  ######Relations
-   `module`
+  #### Model
+   ###### Variables
+    `model`, `module`, `canCreate`, `canUpdate`, `canDelete`, `maxCount`
+   ###### Relations
+    `module`
 
   
 ### Examples
