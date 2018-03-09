@@ -12,7 +12,7 @@ TODO
 ### Components
  #### Plan
    ###### Variables
-    `name`
+    name
    ###### Relations
     `modules`
   
