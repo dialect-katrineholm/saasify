@@ -1,7 +1,8 @@
+[![Build Status](https://travis-ci.com/dialect-katrineholm/saasify.svg?token=EdYhqXZq4TUuwAgtq16F&branch=master)](https://travis-ci.com/dialect-katrineholm/saasify)
+
 # saasify
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Saasify helps package models into modules for easier SAAS-management. Modules then gets attached to plans. This makes it possible to check if a user with a specific plan are able to access a model.
 
 ## Install
 
