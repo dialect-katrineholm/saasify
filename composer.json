@@ -1,18 +1,18 @@
 {
-    "name": "Dialect/Saasify",
+    "name": "dialect/saasify",
     "type": "library",
     "description": "Saas support for laravel models",
     "keywords": [
         "Dialect",
         "Saasify"
     ],
-    "homepage": "https://github.com/Dialect/Saasify",
+    "homepage": "https://github.com/dialect-katrineholm/saasify",
     "license": "MIT",
     "authors": [
         {
             "name": "Dialect Katrineholm",
             "email": "markus.stromgren@dialect.se",
-            "homepage": "https://github.com/",
+            "homepage": "https://github.com/dialect-katrineholm",
             "role": "Developer"
         }
     ],
