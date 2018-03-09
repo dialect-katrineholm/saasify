@@ -40,10 +40,10 @@ TODO
   $model = saasify()->module();
   $model = saasify()->plan();
   
-  //Change the variables using the helper functions
+  //Change the variables using the helper methods
   $model = saasify()->model()->setModel(\App\Model::class)->setMaxCount(100);
   
-  //Use the save-fuction to save or update a component
+  //Use the save-method to save or update a component
   $plan = saasify()->plan()->setName('foo')->save();
   
   //use the delete-function to remove component
@@ -66,12 +66,12 @@ TODO
   
   ## Relations ##
   
-   //to add a relaiton use the add-functions
+   //to add a relaiton use the add-method
    $plan = saasify()->plan()->setName('foo')->save();
    $module = saasify()->module()->setName('bar')->save();
    $plan->addModule($module);
    
-   //or remove using the remove-functions
+   //or remove using the remove-method
    $plan->removeModule($module)
   
    //As of now, you need to set the module on a model before its saved.
@@ -81,6 +81,28 @@ TODO
                      
                      
   ## Access ## 
+  
+  //Add the trait HasPlans to the Laravel model that should have plans
+  class User extends Model{
+	   use HasPlans;
+  }
+  
+  //this gives acceess to new method
+  $user->canAccess(FooBar::class);
+  $user->canAccess($fooBar);
+  $user->canUpdate(..);
+  $user->canDelete(..);
+  $user->getCount(..);
+  
+  //for saasify to know how many instances of a model a user has,
+  //add the saasify helper method to the model with the required logic for counting.
+  
+  public static function saasifyCurrent($user){
+    //logic here, example:
+    return $user->foobar()->count();
+  }
+  
+  
 ```
 
 
