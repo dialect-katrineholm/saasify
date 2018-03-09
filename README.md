@@ -9,6 +9,13 @@ TODO
 
 ## Usage
 
+### Components
+  `plan` - name
+  `module` - name
+  `model` - model, module, canCreate, canUpdate, canDelete, maxCount
+  
+### Examples
+
 ``` php
 
 
