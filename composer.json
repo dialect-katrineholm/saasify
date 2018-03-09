@@ -1,0 +1,55 @@
+{
+    "name": "Dialect/Saasify",
+    "type": "library",
+    "description": "Saas support for laravel models",
+    "keywords": [
+        "Dialect",
+        "Saasify"
+    ],
+    "homepage": "https://github.com/Dialect/Saasify",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dialect Katrineholm",
+            "email": "markus.stromgren@dialect.se",
+            "homepage": "https://github.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3",
+        "orchestra/testbench" : "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dialect\\Saasify\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dialect\\Saasify\\": "tests"
+        },
+        "files": ["tests/helpers.php"]
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
