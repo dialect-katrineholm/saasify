@@ -46,21 +46,38 @@ TODO
   //Use the save-fuction to save or update a component
   $plan = saasify()->plan()->setName('foo')->save();
   
+  //use the delete-function to remove component
+  $plan->delete();
+  
   ## Retrieve component ##
-  $module = saasify()->modules()->find('foobar');
-  $modules = saasify()->modules()->all();
-  //you can also use queries
-  $plans = saasify()->plans(function($query){
-     return $query->where('price', '>', 10);
-  })->get();
+  
+   $module = saasify()->modules()->find('foobar');
+   $modules = saasify()->modules()->all();
+   
+   //It's also possible to use queries
+   $plans = saasify()->plans(function($query){
+      return $query->where('price', '>', 10);
+   })->get();
+   
+   //The component-builders also supports
+   saasify()->modules()->count();
+   saasify()->modules()->first();
+   
   
   ## Relations ##
   
-  //to add a relaiton use the add-functions
-  $plan = saasify()->plan()->setName('foo')->save();
-  $module = saasify()->module()->setName('bar')->save();
-  $plan->addModule($module);
+   //to add a relaiton use the add-functions
+   $plan = saasify()->plan()->setName('foo')->save();
+   $module = saasify()->module()->setName('bar')->save();
+   $plan->addModule($module);
+   
+   //or remove using the remove-functions
+   $plan->removeModule($module)
   
+  //As of now, you need to set the module on a model before its saved.
+  $model = saasify()->model()
+                    ->setModel(\App\Model::class)
+                    ->setModule($module);
 
 ```
 
