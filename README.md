@@ -78,7 +78,9 @@ TODO
    $model = saasify()->model()
                      ->setModel(\App\Model::class)
                      ->setModule($module);
-
+                     
+                     
+  ## Access ## 
 ```
 
 
