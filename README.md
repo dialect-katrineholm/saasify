@@ -10,16 +10,30 @@ TODO
 ## Usage
 
 ### Components
-  `plan` - name
-  
-  `module` - name
-  
-  `model` - model, module, canCreate, canUpdate, canDelete, maxCount
+  ####Plan
+  ######Variables
+   `name`
+  ######Relations
+   `modules`
+  
+  ####Module
+  ######Variables
+   `name`
+  ######Relations
+   `plans`, `models`
+   
+  ####Model
+  ######Variables
+   `model`, `module`, `canCreate`, `canUpdate`, `canDelete`, `maxCount`
+  ######Relations
+   `module`
+
   
 ### Examples
 
 ``` php
-
+ //You can use the saasify-helper to create components
+ 
 
 ```
 
