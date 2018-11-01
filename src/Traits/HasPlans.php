@@ -61,6 +61,14 @@ trait HasPlans{
 		return 0;
 	}
 
+	public function hasModule($module){
+	    return $this->rawSaasifyModules->where('name', $module)->count() > 0;
+    }
+
+    public function hasPlan($plan){
+        return $this->rawSaasifyPlans->where('name', $plan)->count() > 0;
+    }
+
 	public function canAccess($model){
 		if(!is_string($model)){
 			$model = get_class($model);

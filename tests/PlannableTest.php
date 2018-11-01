@@ -74,4 +74,24 @@ class PlannableTest extends \Dialect\Saasify\TestCase {
 		$this->assertCount(2, $user->plans()->get());
 	}
 
+    /** @test */
+    public function it_can_check_if_user_has_plan() {
+        $user = User::create();
+        $plan = saasify()->plan()->setName(str_random(10))->save();
+        $user->addPlan($plan);
+        $this->assertTrue($user->hasPlan($plan->name));
+        $this->assertFalse($user->hasPlan('this_does_not_exist'));
+    }
+
+    /** @test */
+    public function it_can_check_if_user_has_module() {
+        $user = User::create();
+        $plan = saasify()->plan()->setName(str_random(10))->save();
+        $module = saasify()->module()->setName(str_random(10))->save();
+        $plan->addModule($module);
+        $user->addPlan($plan);
+        $this->assertTrue($user->hasModule($module->name));
+        $this->assertFalse($user->hasModule('this_does_not_exist'));
+    }
+
 }
