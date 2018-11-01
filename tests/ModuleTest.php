@@ -68,4 +68,6 @@ class ModuleTest extends \Dialect\Saasify\TestCase {
 		$this->assertEquals($modules->first()->name, $name);
 	}
 
+
+
 }
